@@ -5,27 +5,26 @@
         .module('angularjsWhiteApp')
         .controller('MainController', MainController);
 
+    MainController.$inject = ['psResponsive'];
+
     /* @ngInject */
-    function MainController($timeout, AppTechnologiesService, toastr) {
+    function MainController(psResponsive) {
         var vm = this;
 
-        vm.awesomeThings = [];
-        vm.siiTechs = [];
-        vm.classAnimation = 'rubberBand';
-        vm.showToastr = showToastr;
-
-        getAppTechnologies();
+        vm.sidebarCollapsed = false;
+        vm.mainMenuCollapsed = false;
+        vm.toggleLeftSideBar = toggleLeftSideBar;
 
         ////////////
 
-        function showToastr() {
-            toastr.info('Generator Gulp Angular / SII');
-            vm.classAnimation = '';
-        }
+        function toggleLeftSideBar(e) {
+            e.preventDefault();
 
-        function getAppTechnologies() {
-            vm.awesomeThings = AppTechnologiesService.getTechs();
-            vm.siiTechs = AppTechnologiesService.getSIITechs();
+            if (psResponsive('tiny')) {
+                vm.mainMenuCollapsed = !vm.mainMenuCollapsed;
+            } else {
+                vm.sidebarCollapsed = !vm.sidebarCollapsed;
+            }
         }
     }
 })();

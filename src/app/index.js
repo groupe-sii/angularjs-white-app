@@ -6,9 +6,14 @@
      * @name angularjsWhiteApp
      * @description angularjsWhiteApp main module
      */
+
+    angular.module('angularjsWhiteApp-factories', []);
+    angular.module('angularjsWhiteApp-services', []);
+    angular.module('angularjsWhiteApp-directives', []);
+    angular.module('angularjsWhiteApp-filters', []);
+
     angular
         .module('angularjsWhiteApp', [
-            'pascalprecht.translate',
 			'ngCookies',
 			'ngTouch',
 			'ngSanitize',
@@ -17,8 +22,14 @@
 			'restangular',
 			'ui.router',
 			'ui.bootstrap',
+            'psResponsive',
+            'pascalprecht.translate',
+            'toastr',
 			'angularjsWhiteApp-config',
-			'toastr'
+            'angularjsWhiteApp-factories',
+            'angularjsWhiteApp-services',
+            'angularjsWhiteApp-directives',
+            'angularjsWhiteApp-filters'
         ])
         .config(config)
         .run(run);
@@ -27,6 +38,7 @@
 
     /* @ngInject */
     function config($translateProvider, LANGUAGES) {
+
         // Translation
         var language = navigator.browserLanguage || navigator.language;
         $translateProvider.translations('en', LANGUAGES.en);

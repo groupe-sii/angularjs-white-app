@@ -1,0 +1,19 @@
+/*----------------------------------------
+    Override Neon
+----------------------------------------*/
+
+.logo-env {
+    padding: 15px 35px !important;
+}
+
+.sidebar-collapse {
+    top: 15px;
+
+    & > a {
+        padding: 8px !important;
+    }
+}
+
+.page-container.sidebar-collapsed .sidebar-menu .logo-env > div.sidebar-collapse {
+    left: 13px;
+}
