@@ -3,7 +3,12 @@
 ----------------------------------------*/
 
 .logo-env {
-    padding: 15px 35px !important;
+    padding: 20px 35px !important;
+
+    & > .logo {
+        position: relative;
+        left: 33px;
+    }
 }
 
 .sidebar-collapse {
@@ -16,4 +21,26 @@
 
 .page-container.sidebar-collapsed .sidebar-menu .logo-env > div.sidebar-collapse {
     left: 13px;
+}
+
+/*  Sidebar
+----------------------------------------*/
+
+.sidebar-menu {
+    background-color: #3A3F51 !important;
+    -webkit-transition: width .2s cubic-bezier(.35, 0, .25, 1), translate .2s cubic-bezier(.35, 0, .25, 1);
+    -o-transition: width .2s cubic-bezier(.35, 0, .25, 1), translate .2s cubic-bezier(.35, 0, .25, 1);
+    transition: width .2s cubic-bezier(.35, 0, .25, 1), translate .2s cubic-bezier(.35, 0, .25, 1);
+
+    & ul > li > a {
+        color: #e1e2e3 !important;
+    }
+
+    & ul > li.active {
+        border-left: 3px solid #1797BE;
+
+        & > a {
+            color: #1797BE !important;
+        }
+    }
 }

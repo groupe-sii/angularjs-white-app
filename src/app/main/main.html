@@ -1,5 +1,7 @@
 <div class="page-body">
     <div class="page-container" ng-class="{'sidebar-collapsed': main.sidebarCollapsed}">
+
+        <!-- Sidebar -->
         <div class="sidebar-menu">
             <div class="sidebar-menu-inner">
                 <header class="logo-env">
@@ -22,9 +24,17 @@
                             <span class="title">Home</span>
                         </a>
                     </li>
+                    <li>
+                        <a ui-sref="app.home">
+                            <i class="fa fa-bars"></i>
+                            <span class="title">Navigation</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
+
+        <!-- Container -->
         <div class="main-content" ui-view>
         </div>
     </div>
