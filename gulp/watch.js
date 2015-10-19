@@ -24,8 +24,8 @@ gulp.task('watch', ['inject', 'config'], function () {
     gulp.watch([
         path.join(conf.paths.src, '/app/**/*.css'),
         path.join(conf.paths.src, '/app/**/*.scss'),
-        path.join(conf.paths.src, '/style/**/*.css'),
-        path.join(conf.paths.src, '/style/**/*.scss')
+        path.join(conf.paths.src, '/styles/**/*.css'),
+        path.join(conf.paths.src, '/styles/**/*.scss')
     ], function(event) {
         if(isOnlyChange(event)) {
             gulp.start('styles');
