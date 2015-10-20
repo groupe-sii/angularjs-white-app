@@ -17,25 +17,12 @@
                         <a href="#" class="with-animation" ng-click="main.toggleLeftSideBar($event);"><i class="fa fa-bars"></i></a>
                     </div>
                 </header>
-                <ul id="main-menu" class="main-menu" ng-class="{'block': main.mainMenuCollapsed}">
-                    <li ui-sref-active="active">
-                        <a ui-sref="app.home">
-                            <i class="fa fa-home"></i>
-                            <span class="title">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a ui-sref="app.home">
-                            <i class="fa fa-bars"></i>
-                            <span class="title">Navigation</span>
-                        </a>
-                    </li>
-                </ul>
+
+                <navigation id="main-menu" class="main-menu" navigation="main.navigation" root-level="true" ng-class="{'block': main.mainMenuCollapsed}"></navigation>
             </div>
         </div>
 
         <!-- Container -->
-        <div class="main-content" ui-view>
-        </div>
+        <div class="main-content" ui-view></div>
     </div>
 </div>

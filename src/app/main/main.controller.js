@@ -5,14 +5,15 @@
         .module('angularjsWhiteApp')
         .controller('MainController', MainController);
 
-    MainController.$inject = ['psResponsive'];
+    MainController.$inject = ['psResponsive', 'NAVIGATION'];
 
     /* @ngInject */
-    function MainController(psResponsive) {
+    function MainController(psResponsive, NAVIGATION) {
         var vm = this;
 
         vm.sidebarCollapsed = false;
         vm.mainMenuCollapsed = false;
+        vm.navigation = NAVIGATION;
         vm.toggleLeftSideBar = toggleLeftSideBar;
 
         ////////////

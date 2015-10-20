@@ -1,5 +1,22 @@
 {
-    "ALERTE": {
-        "ERR_SERVICE": "Le service n'est pas disponible"
-    }
+    "NAVIGATION": [
+        {
+            "name": "<i class='fa fa-home'></i><span class='title'>Home</span>",
+            "link": "app.home",
+            "subtree": [
+                {
+                    "name": "<span class='title'>Home 1</span>",
+                    "link": "app.navigation"
+                },
+                {
+                    "name": "Home 2",
+                    "link": "app.navigation"
+                }
+            ]
+        },
+        {
+            "name": "<i class='fa fa-bars'></i><span class='title'>Navigation</span>",
+            "link": "app.navigation"
+        }
+    ]
 }
