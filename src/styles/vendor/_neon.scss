@@ -13528,16 +13528,15 @@ body {
 
 .page-container .sidebar-menu #main-menu li.has-sub > a:before {
     position: relative;
-    content: '\e877';
-    content: '\e879';
+    content: '\f054';
     display: inline-block;
-    font-family: 'Entypo';
+    font-family: 'FontAwesome';
     color: #454a54;
     color: #FFF;
     float: right;
-    font-size: 15px;
+    font-size: 11px;
     margin-left: 13px;
-    top: 0px;
+    top: 2px;
     -webkit-transition: all 300ms ease-in-out;
     -moz-transition: all 300ms ease-in-out;
     -o-transition: all 300ms ease-in-out;
