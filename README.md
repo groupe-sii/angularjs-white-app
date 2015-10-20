@@ -10,13 +10,13 @@ This white application apply John Papa's style guide preconisations for a beauti
 
 # TODO
 
-Navbar
-Hiérarchie avec ui-router
-ng-router 2
-Tableau (filtre + pagination)
-Controller + Factory + Service
-Authentification
-Exemple formulaire
-Autocomplete
-Infinite scrolling
-I18N
+* Navbar
+* Hiérarchie avec ui-router
+* ng-router 2
+* Tableau (filtre + pagination)
+* Controller + Factory + Service
+* Authentification
+* Exemple formulaire
+* Autocomplete
+* Infinite scrolling
+* I18N
