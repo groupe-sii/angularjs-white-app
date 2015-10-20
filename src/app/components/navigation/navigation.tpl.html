@@ -1,0 +1,7 @@
+<ul>
+    <leaf
+        ng-repeat="leaf in nav.navigation"
+        ng-class="{'root-level': rootLevel, 'has-sub': leaf.subtree, 'opened': leaf.opened}"
+        ng-click="nav.open(leaf)"
+        leaf="leaf"></leaf>
+</ul>
