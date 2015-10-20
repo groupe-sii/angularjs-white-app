@@ -8,6 +8,12 @@ This white application apply John Papa's style guide preconisations for a beauti
 
 [Style Guide](https://github.com/johnpapa/angular-styleguide)
 
+## Git Commit Guidlines
+
+For this applications and the others we apply AngularJS Git Commit Message Conventions made by AngularJS developpers team.
+
+[Git Commit Guidlines](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit)
+
 # TODO
 
 * Navbar
