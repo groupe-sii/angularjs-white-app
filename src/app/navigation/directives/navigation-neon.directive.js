@@ -3,17 +3,17 @@
 
     angular
         .module('angularjsWhiteApp-directives')
-        .directive('navigation', navigation)
-        .directive('leaf', leaf);
+        .directive('navigationNeon', navigationNeon)
+        .directive('leafNeon', leafNeon);
 
     /* @ngInject */
-    function navigation() {
+    function navigationNeon() {
         // Usage:
         //      navigation: Navigation array
-        //      root-level: TRUE if it is the navigation root level; FALSE otherwise
+        //      root-level: TRUE if it is the navigation root level; FALSE otherwise (TRUE by default)
         //
         // Creates:
-        //      <navigation navigation="array" root-level="true"></navigation>
+        //      <navigation-neon navigation="array" root-level="false"></navigation-neon>
         //
         // Array:
         //      [
@@ -42,8 +42,8 @@
             },
             restrict: 'E',
             replace: true,
-            templateUrl: 'app/navigation/directives/navigation.tpl.html',
-            controller: NavigationController,
+            templateUrl: 'app/navigation/directives/navigation-neon.tpl.html',
+            controller: NavigationNeonController,
             controllerAs: 'nav',
             bindToController: true
         };
@@ -51,9 +51,10 @@
         return directive;
     }
 
-    function NavigationController() {
+    function NavigationNeonController() {
         var vm = this;
 
+        vm.rootLevel = (angular.isDefined(vm.rootLevel)) ? vm.rootLevel : true;
         vm.open = open;
 
         ////////////
@@ -67,20 +68,20 @@
 
     /////////////////////////////////////////////////////////////////::
 
-    leaf.$inject = ['$compile'];
+    leafNeon.$inject = ['$compile'];
 
     /* @ngInject */
-    function leaf($compile) {
+    function leafNeon($compile) {
         var directive = {
             scope: {
                 leaf: '='
             },
             restrict: 'E',
             replace: true,
-            templateUrl: 'app/navigation/directives/leaf.tpl.html',
+            templateUrl: 'app/navigation/directives/leaf-neon.tpl.html',
             link: function(scope, element) {
                 if (angular.isArray(scope.leaf.subtree)) {
-                    element.append($compile('<navigation navigation=\"leaf.subtree\" ng-class=\"{\'visible\': leaf.opened}\"></navigation>')(scope));
+                    element.append($compile('<navigation-neon navigation=\"leaf.subtree\" root-level=\"false\" ng-class=\"{\'visible\': leaf.opened}\"></navigation-neon>')(scope));
                 }
 
             }
