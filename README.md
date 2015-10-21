@@ -16,7 +16,7 @@ For this applications and the others we apply AngularJS Git Commit Message Conve
 
 # TODO
 
-* Navbar
+* ~~Navbar~~
 * Hiérarchie avec ui-router
 * ng-router 2
 * Tableau (filtre + pagination)
