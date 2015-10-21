@@ -2,21 +2,20 @@
     "NAVIGATION": [
         {
             "name": "<i class='fa fa-home'></i><span class='title'>Home</span>",
-            "link": "app.home",
-            "subtree": [
-                {
-                    "name": "<span class='title'>Home 1</span>",
-                    "link": "app.navigation"
-                },
-                {
-                    "name": "Home 2",
-                    "link": "app.navigation"
-                }
-            ]
+            "link": "app.home"
         },
         {
             "name": "<i class='fa fa-bars'></i><span class='title'>Navigation</span>",
-            "link": "app.navigation"
+            "subtree": [
+                {
+                    "name": "<span class='title'>Bootstrap</span>",
+                    "link": "app.navigation.bootstrap"
+                },
+                {
+                    "name": "<span class='title'>Neon</span>",
+                    "link": "app.navigation.neon"
+                }
+            ]
         }
     ]
 }
