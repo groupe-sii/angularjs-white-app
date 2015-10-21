@@ -5,8 +5,6 @@
         .module('angularjsWhiteApp')
         .controller('NavigationBootstrapController', NavigationBootstrapController);
 
-    NavigationBootstrapController.$inject = [];
-
     /* @ngInject */
     function NavigationBootstrapController() {
         var vm = this;
