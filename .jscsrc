@@ -38,8 +38,7 @@
     "disallowYodaConditions": true,
     "maximumLineLength": {
         "allowComments": true,
-        "allowRegex": true,
-        "value": 160
+        "allowRegex": true
     },
     "requireBlocksOnNewline": 1,
     "requireCamelCaseOrUpperCaseIdentifiers": true,
