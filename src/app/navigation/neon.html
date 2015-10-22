@@ -2,6 +2,8 @@
 
 <hr/>
 
+<div class="alert alert-info">This bootstrap navigation directive is using ui-router module. If you want to use another routing system, refer to <a ui-sref="app.navigation.neon({'#': 'routing'})"><strong>Routing</strong></a> section.</div>
+
 <h2>Usage</h2>
 
 <p><strong>navigation</strong>: Navigation array.</p>
@@ -12,7 +14,8 @@
 
 <h2>Navigation array</h2>
 
-<div hljs>[
+<div hljs>
+[
     {
         name: "<i class='fa fa-home'></i><span class='title'>Home</span>",
         link: "app.home"
@@ -30,4 +33,9 @@
             }
         ]
     }
-]</div>
+]
+</div>
+
+<h2 id="routing">Routing</h2>
+
+If you want to switch to another routing system. You can modify all references to <div hljs class="hljs-inline">ui-sref-active=""</div> and <div hljs class="hljs-inline">ui-sref=""</div> in the <strong>navigation-boostrap.tpl.html</strong> file to match your routing system.  
