@@ -28,51 +28,43 @@
 
 <h2>Creates</h2>
 
-<pre>< navigation-bootstrap navigation="array">< /navigation-bootstrap></pre>
+<div hljs><navigation-bootstrap navigation="array"></navigation-bootstrap></div>
 
 <h2>Navigation array</h2>
 
 <div hljs>[
     {
-        name: 'Home',
-        link: 'app.home'
-    },
-    {
-        name: 'About',
-        link: 'app.about'
-    },
-    {
-        name: 'Contact',
-        link: 'app.contact'
-    },
-    {
-        name: 'Dropdown',
-        subtree: [
-            {
-                name: 'Action',
-                link: 'app.dropdown.action'
-            },
-            {
-                name: 'Another action',
-                link: 'app.dropdown.aaction'
-            },
-            {
-                name: 'Something else here',
-                link: 'app.dropdown.seh'
-            },
-            {divider: true},
-            {
-                header: true,
-                name: 'Nav header'
-            },
-            {
-                name: 'Separated link',
-                link: 'app.dropdown.sl'
-            },
-            {
-                name: 'One more separated link',
-                link: 'app.dropdown.omsl'
-            }
-        ]
+        name: "Home",
+        link: "app.home"
+    }, {
+        name: "About",
+        link: "app.about"
+    }, {
+        name: "Contact",
+        link: "app.contact"
+    }, {
+        name: "Dropdown",
+        subtree: [{
+            name: "Action",
+            link: "app.dropdown.action"
+        }, {
+            name: "Another action",
+            link: "app.dropdown.aaction"
+        }, {
+            name: "Something else here",
+            link: "app.dropdown.seh"
+        }, {
+            divider: true
+        }, {
+            header: true,
+            name: "Nav header"
+        }, {
+            name: "Separated link",
+            link: "app.dropdown.sl"
+        }, {
+            name: "One more separated link",
+            link: "app.dropdown.omsl"
+        }]
     }
-]</div>
+]
+</div>
