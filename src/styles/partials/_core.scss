@@ -14,3 +14,14 @@ a:visited
 a:active {
     text-decoration: none !important;
 }
+
+.app-title {
+    margin: -20px -20px 20px -20px;
+    padding: 15px;
+    line-height: 1.1;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: #189BC3;
+    border-bottom: 1px solid #CFDBE2;
+}
