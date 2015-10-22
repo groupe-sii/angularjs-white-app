@@ -27,7 +27,5 @@
                 controller: 'NavigationNeonController',
                 controllerAs: 'n'
             });
-
-        $urlRouterProvider.otherwise('/');
     }
 })();
