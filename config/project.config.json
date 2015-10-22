@@ -16,6 +16,43 @@
                     "link": "app.navigation.neon"
                 }
             ]
+        },
+        {
+            "name": "<i class='fa fa-globe'></i><span class='title'>I18N (Translation)</span>",
+            "link": "app.i18n"
+        },
+        {
+            "name": "<i class='fa fa-road'></i><span class='title'>Routing</span>",
+            "subtree": [
+                {
+                    "name": "<span class='title'>AngularUI Router</span>",
+                    "link": "app.routing.angularui-router"
+                },
+                {
+                    "name": "<span class='title'>Angular New Router</span>",
+                    "link": "app.routing.angular-new-router"
+                }
+            ]
+        },
+        {
+            "name": "<i class='fa fa-table'></i><span class='title'>Tables</span>",
+            "link": "app.tables"
+        },
+        {
+            "name": "<i class='fa fa-lock'></i><span class='title'>Authentication</span>",
+            "link": "app.authentication"
+        },
+        {
+            "name": "<i class='fa fa-check-square-o'></i><span class='title'>Forms</span>",
+            "link": "app.forms"
+        },
+        {
+            "name": "<i class='fa fa-keyboard-o'></i><span class='title'>Autocomplete</span>",
+            "link": "app.autocomplete"
+        },
+        {
+            "name": "<i class='fa fa-hand-pointer-o'></i><span class='title'>Infinite scrolling</span>",
+            "link": "app.infinite-scrolling"
         }
     ]
 }
