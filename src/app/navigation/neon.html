@@ -8,8 +8,26 @@
 
 <h2>Creates</h2>
 
-<pre>< navigation-neon navigation="array">< /navigation-neon></pre>
+<div hljs><navigation-neon navigation="array"></navigation-neon></div>
 
 <h2>Navigation array</h2>
 
-<pre>{{ n.navigation | json }}</pre>
+<div hljs>[
+    {
+        name: "<i class='fa fa-home'></i><span class='title'>Home</span>",
+        link: "app.home"
+    },
+    {
+        name: "<i class='fa fa-bars'></i><span class='title'>Navigation</span>",
+        subtree: [
+            {
+                name: "<span class='title'>Bootstrap</span>",
+                link: "app.navigation.bootstrap"
+            },
+            {
+                name: "<span class='title'>Neon</span>",
+                link: "app.navigation.neon"
+            }
+        ]
+    }
+]</div>
