@@ -25,6 +25,7 @@
             'psResponsive',
             'pascalprecht.translate',
             'toastr',
+            'hljs',
 			'angularjsWhiteApp-config',
             'angularjsWhiteApp-factories',
             'angularjsWhiteApp-services',
@@ -34,16 +35,21 @@
         .config(config)
         .run(run);
 
-    config.$inject = ['$translateProvider', 'LANGUAGES'];
+    config.$inject = ['$translateProvider', 'hljsServiceProvider', 'LANGUAGES'];
 
     /* @ngInject */
-    function config($translateProvider, LANGUAGES) {
+    function config($translateProvider, hljsServiceProvider, LANGUAGES) {
 
         // Translation
         var language = navigator.browserLanguage || navigator.language;
         $translateProvider.translations('en', LANGUAGES.en);
         $translateProvider.translations('fr', LANGUAGES.fr);
         $translateProvider.preferredLanguage((angular.isDefined(LANGUAGES[language])) ? language : 'en');
+
+        // Highlight JS
+        hljsServiceProvider.setOptions({
+            tabReplace: '    '
+        });
     }
 
     /* @ngInject */
