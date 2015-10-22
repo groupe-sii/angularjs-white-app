@@ -12,7 +12,7 @@
                     "link": "app.navigation.bootstrap"
                 },
                 {
-                    "name": "<span class='title'>Neon</span>",
+                    "name": "<span class='title'>Neon - Bootstrap Theme</span>",
                     "link": "app.navigation.neon"
                 }
             ]
