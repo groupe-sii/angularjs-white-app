@@ -10,9 +10,7 @@
         $stateProvider
             .state('app.guidelines', {
                 url: 'guidelines',
-                templateUrl: 'app/guidelines/guidelines.html',
-                controller: 'GuidelinesController',
-                controllerAs: 'g'
+                templateUrl: 'app/guidelines/guidelines.html'
             });
     }
 })();
