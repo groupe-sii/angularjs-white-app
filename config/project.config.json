@@ -5,6 +5,10 @@
             "link": "app.home"
         },
         {
+            "name": "<i class='fa fa-pencil-square-o'></i><span class='title'>Guidelines</span>",
+            "link": "app.guidelines"
+        },
+        {
             "name": "<i class='fa fa-bars'></i><span class='title'>Navigation</span>",
             "subtree": [
                 {
