@@ -1,5 +1,8 @@
 /*----------------------------------------
-    Override Neon
+    Rest
+----------------------------------------*/
+
+/*  Neon
 ----------------------------------------*/
 
 .logo-env {
@@ -27,9 +30,7 @@
     padding-left: 12px;
 }
 
-/*  Sidebar
-----------------------------------------*/
-
+// Sidebar
 .sidebar-menu {
     background-color: #3A3F51 !important;
     -webkit-transition: width .2s cubic-bezier(.35, 0, .25, 1), translate .2s cubic-bezier(.35, 0, .25, 1);
