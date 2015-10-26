@@ -4,8 +4,8 @@ White app demonstrating common web patterns and their implementation with Angula
 
 ## What's in it ?
 
-* *Guidelines*: A bunch of guidelines to write clean code in AngularJS
-* *Navbar*: A directive to easily create your own navigation bar
+* **Guidelines**: A bunch of guidelines to write clean code in AngularJS
+* **Navbar**: A directive to easily create your own navigation bar
 
 ## Write clean code !
 
