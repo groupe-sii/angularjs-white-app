@@ -8,21 +8,28 @@ This white application apply John Papa's style guide preconisations for a beauti
 
 [Style Guide](https://github.com/johnpapa/angular-styleguide)
 
-## Git Commit Guidlines
+## Git Commit Guidelines
 
 For this applications and the others we apply AngularJS Git Commit Message Conventions made by AngularJS developpers team.
 
 [Git Commit Guidlines](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit)
 
+## Sass guidelines
+
+Here is some recomendations you might want to apply in your Sass applications.
+
+[Sass guidelines](http://sass-guidelin.es)
+
 # TODO
 
+* ~~Guidlines~~
 * ~~Navbar~~
-* Hiérarchie avec ui-router
-* ng-router 2
-* Tableau (filtre + pagination)
-* Controller + Factory + Service
-* Authentification
-* Exemple formulaire
+* Config & Environments
+* I18N
+* Routing
+* Documentation
+* Tables
+* Authentication
+* Forms
 * Autocomplete
 * Infinite scrolling
-* I18N
