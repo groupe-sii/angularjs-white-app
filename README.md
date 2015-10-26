@@ -22,7 +22,7 @@ Here is some recomendations you might want to apply in your Sass applications.
 
 # TODO
 
-* ~~Guidlines~~
+* ~~Guidelines~~
 * ~~Navbar~~
 * Config & Environments
 * I18N
