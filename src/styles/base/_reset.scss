@@ -1,0 +1,77 @@
+/*----------------------------------------
+    Rest
+----------------------------------------*/
+
+/*  Neon
+----------------------------------------*/
+
+.logo-env {
+    padding: 20px 35px !important;
+
+    & > .logo {
+        position: relative;
+        left: 33px;
+    }
+}
+
+.sidebar-collapse {
+    top: 15px;
+
+    & > a {
+        padding: 8px !important;
+    }
+}
+
+.page-container.sidebar-collapsed .sidebar-menu .logo-env > div.sidebar-collapse {
+    left: 13px;
+}
+
+.dropdown-header {
+    padding-left: 12px;
+}
+
+// Sidebar
+.sidebar-menu {
+    background-color: #3A3F51 !important;
+    -webkit-transition: width .2s cubic-bezier(.35, 0, .25, 1), translate .2s cubic-bezier(.35, 0, .25, 1);
+    -o-transition: width .2s cubic-bezier(.35, 0, .25, 1), translate .2s cubic-bezier(.35, 0, .25, 1);
+    transition: width .2s cubic-bezier(.35, 0, .25, 1), translate .2s cubic-bezier(.35, 0, .25, 1);
+
+    & ul {
+        list-style: none;
+        margin: 0 0 20px 0;
+        padding: 0;
+
+        & > li,
+        a > li > a {
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+             -o-user-select: none;
+                user-select: none;
+        }
+
+        & > li > a  {
+            color: #E1E2E3 !important;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #363C47 !important;
+                color: #FFFFFF !important;
+            }
+        }
+
+        & > li.active {
+
+            & > a {
+                border-left: 3px solid #1797BE;
+                color: #1797BE !important;
+            }
+
+            & a > span {
+                left: 62px !important;
+            }
+        }
+    }
+}

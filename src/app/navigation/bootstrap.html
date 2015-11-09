@@ -1,0 +1,84 @@
+<h1 class="app-title">Navigation - Bootstrap</h1>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <navigation-bootstrap navigation="b.navigation"></navigation-bootstrap>
+            <navigation-bootstrap navigation="b.rightNavigation" class="navbar-right"></navigation-bootstrap>
+        </div>
+    </div>
+</nav>
+
+<hr/>
+
+<div class="alert alert-info">This bootstrap navigation directive is using ui-router module. If you want to use another routing system, refer to <a ui-sref="app.navigation.bootstrap({'#': 'routing'})"><strong>Routing</strong></a> section.</div>
+
+<h2>Usage</h2>
+
+<p><strong>navigation</strong>: Navigation array.</p>
+<p><strong>class</strong>: You can add some CSS classes (e.g: navbar-right)</p>
+
+<h2>Creates</h2>
+
+<div hljs><navigation-bootstrap navigation="array"></navigation-bootstrap></div>
+
+<h2>Navigation array</h2>
+
+<div hljs>
+[
+    {
+        name: "Home",
+        link: "app.home"
+    }, {
+        name: "About",
+        link: "app.about"
+    }, {
+        name: "Contact",
+        link: "app.contact"
+    }, {
+        name: "Dropdown",
+        subtree: [{
+            name: "Action",
+            link: "app.dropdown.action"
+        }, {
+            name: "Another action",
+            link: "app.dropdown.aaction"
+        }, {
+            name: "Something else here",
+            link: "app.dropdown.seh"
+        }, {
+            divider: true
+        }, {
+            header: true,
+            name: "Nav header"
+        }, {
+            name: "Separated link",
+            link: "app.dropdown.sl"
+        }, {
+            name: "One more separated link",
+            link: "app.dropdown.omsl"
+        }]
+    }
+]
+</div>
+
+<h2 id="routing">Routing</h2>
+
+If you want to switch to another routing system. You can modify all references to <div hljs class="hljs-inline">ui-sref-active=""</div> and <div hljs class="hljs-inline">ui-sref=""</div> in the <strong>navigation-boostrap.tpl.html</strong> file to match your routing system.
+
+<h2>Related files</h2>
+
+<ul>
+    <li>/src/app/navigation/directives/navigation-bootstrap.js</li>
+    <li>/src/app/navigation/directives/navigation-bootstrap.tpl.html</li>
+</ul>

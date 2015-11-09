@@ -1,0 +1,16 @@
+/*----------------------------------------
+    HiighlightJS
+----------------------------------------*/
+
+pre {
+    padding: 0;
+    background-color: transparent;
+}
+
+.hljs-inline,
+.hljs-inline > pre,
+.hljs-inline > pre > .hljs {
+    display: inline;
+    margin: 0;
+    border: none;
+}

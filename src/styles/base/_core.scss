@@ -1,0 +1,50 @@
+ @import url(https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic);
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
+
+/*----------------------------------------
+    Core
+----------------------------------------*/
+
+body {
+    color: #333333;
+    font-family: "Open Sans", "Noto Sans", sans-serif;
+}
+
+body > div,
+body > div > .page-body {
+    height: 100%;
+    min-height: 100%;
+}
+
+a {
+    color: #3887BE;
+    @include transition(all 0.5s ease 0s);
+}
+
+a:hover,
+a:focus,
+a:visited
+a:active {
+    color: #63B6E5;
+    text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-weight: normal;
+    color: #495D77;
+}
+
+.app-title {
+    margin: -20px -20px 20px -20px;
+    padding: 15px;
+    line-height: 1.1;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: #39ADCC;
+    border-bottom: 1px solid #CFDBE2;
+}

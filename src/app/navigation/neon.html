@@ -1,0 +1,51 @@
+<h1 class="app-title">Navigation - Neon</h1>
+
+<h1><i class="fa fa-arrow-left"></i> Over here</h1>
+
+<hr/>
+
+<div class="alert alert-info">This bootstrap navigation directive is using ui-router module. If you want to use another routing system, refer to <a ui-sref="app.navigation.neon({'#': 'routing'})"><strong>Routing</strong></a> section.</div>
+
+<h2>Usage</h2>
+
+<p><strong>navigation</strong>: Navigation array.</p>
+
+<h2>Creates</h2>
+
+<div hljs><navigation-neon navigation="array"></navigation-neon></div>
+
+<h2>Navigation array</h2>
+
+<div hljs>
+[
+    {
+        name: "<i class='fa fa-home'></i><span class='title'>Home</span>",
+        link: "app.home"
+    },
+    {
+        name: "<i class='fa fa-bars'></i><span class='title'>Navigation</span>",
+        subtree: [
+            {
+                name: "<span class='title'>Bootstrap</span>",
+                link: "app.navigation.bootstrap"
+            },
+            {
+                name: "<span class='title'>Neon</span>",
+                link: "app.navigation.neon"
+            }
+        ]
+    }
+]
+</div>
+
+<h2 id="routing">Routing</h2>
+
+If you want to switch to another routing system. You can modify all references to <div hljs class="hljs-inline">ui-sref-active=""</div> and <div hljs class="hljs-inline">ui-sref=""</div> in the <strong>leaf-neon.tpl.html</strong> file to match your routing system.
+
+<h2>Related files</h2>
+
+<ul>
+    <li>/src/app/navigation/directives/navigation-neon.js</li>
+    <li>/src/app/navigation/directives/navigation-neon.tpl.html</li>
+    <li>/src/app/navigation/directives/leaf-neon.tpl.html</li>
+</ul>

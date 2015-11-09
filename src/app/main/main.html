@@ -1,0 +1,28 @@
+<div class="page-body">
+    <div class="page-container" ng-class="{'sidebar-collapsed': main.sidebarCollapsed}">
+
+        <!-- Sidebar -->
+        <div class="sidebar-menu">
+            <div class="sidebar-menu-inner">
+                <header class="logo-env">
+                    <div class="logo">
+                        <a ui-sref="app.home">
+                            <img src="assets/images/sii.png" height="60px" alt="AngularJS White Application" title="AngularJS White Application" />
+                        </a>
+                    </div>
+                    <div class="sidebar-collapse">
+                        <a href="#" class="sidebar-collapse-icon" ng-click="main.toggleLeftSideBar($event);"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div class="sidebar-mobile-menu visible-xs">
+                        <a href="#" class="with-animation" ng-click="main.toggleLeftSideBar($event);"><i class="fa fa-bars"></i></a>
+                    </div>
+                </header>
+
+                <navigation-neon id="main-menu" class="main-menu" navigation="main.navigation" ng-class="{'block': main.mainMenuCollapsed}"></navigation-neon>
+            </div>
+        </div>
+
+        <!-- Container -->
+        <div class="main-content" ui-view></div>
+    </div>
+</div>

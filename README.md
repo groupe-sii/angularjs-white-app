@@ -1,16 +1,40 @@
-# angularjs-white-app
+# AngularJS White Application
 
-White app demonstrating common web patterns and their implementation with AngularJS
+White app demonstrating common web patterns and their implementation with AngularJS.
 
-## TODO
+## What's in it ?
 
-* Navbar
-* Hiérarchie avec ui-router
-* ng-router 2
-* Tableau (filtre + pagination)
-* Controller + Factory + Service
-* Authentification
-* Exemple formulaire
+* **Guidelines**: A bunch of guidelines to write clean code in AngularJS
+* **Navbar**: A directive to easily create your own navigation bar
+
+## Write clean code !
+
+### AngularJS Style Guide
+
+This white application apply John Papa's style guide preconisations for a beautiful, reusable and maintanable code. We highly suggest you to apply them on your own angular applications.
+
+[Style Guide](https://github.com/johnpapa/angular-styleguide)
+
+### Git Commit Guidelines
+
+For this applications and the others we apply AngularJS Git Commit Message Conventions made by AngularJS developpers team.
+
+[Git Commit Guidlines](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit)
+
+### Sass guidelines
+
+Here is some recomendations you might want to apply in your Sass applications.
+
+[Sass guidelines](http://sass-guidelin.es)
+
+## What is to come ?
+
+* Config & Environments
+* I18N
+* Routing
+* Documentation
+* Tables
+* Authentication
+* Forms
 * Autocomplete
 * Infinite scrolling
-* I18N

@@ -1,0 +1,23 @@
+<ul class="nav navbar-nav">
+    <span ng-repeat-start="leaf in navigation"></span>
+
+    <li ng-if="!leaf.subtree" ui-sref-active="active">
+        <a ui-sref="{{ leaf.link }}" >{{ leaf.name }}</a>
+    </li>
+
+    <li ng-if="leaf.subtree"  ui-sref-active="active" dropdown>
+        <a ui-sref="{{ leaf.name }}" ui-sref-active="active" dropdown-toggle>
+            {{ leaf.name }}
+            <i class="caret"></i>
+        </a>
+
+        <ul class="dropdown-menu">
+            <li ng-repeat="subleaf in leaf.subtree" ng-class="{'divider': subleaf.divider, 'dropdown-header': subleaf.header}">
+                <a ng-href="{{ subleaf.link }}" ng-if="!subleaf.divider && !subleaf.header">{{ subleaf.name }}</a>
+                <span ng-if="subleaf.header">{{ subleaf.name }}</span>
+            </li>
+        </ul>
+    </li>
+
+    <span ng-repeat-end></span>
+</ul>

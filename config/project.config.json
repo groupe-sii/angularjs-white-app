@@ -1,0 +1,70 @@
+{
+    "NAVIGATION": [
+        {
+            "name": "<i class='fa fa-home'></i><span class='title'>Home</span>",
+            "link": "app.home"
+        },
+        {
+            "name": "<i class='fa fa-pencil-square-o'></i><span class='title'>Guidelines</span>",
+            "link": "app.guidelines"
+        },
+        {
+            "name": "<i class='fa fa-bars'></i><span class='title'>Navigation</span>",
+            "subtree": [
+                {
+                    "name": "<span class='title'>Bootstrap</span>",
+                    "link": "app.navigation.bootstrap"
+                },
+                {
+                    "name": "<span class='title'>Neon - Bootstrap Theme</span>",
+                    "link": "app.navigation.neon"
+                }
+            ]
+        },
+        {
+            "name": "<i class='fa fa-book'></i><span class='title'>Documentation</span>",
+            "link": "app.documentation"
+        },
+        {
+            "name": "<i class='fa fa-globe'></i><span class='title'>I18N (Translation)</span>",
+            "link": "app.i18n"
+        },
+        {
+            "name": "<i class='fa fa-road'></i><span class='title'>Routing</span>",
+            "subtree": [
+                {
+                    "name": "<span class='title'>AngularUI Router</span>",
+                    "link": "app.routing.angularui-router"
+                },
+                {
+                    "name": "<span class='title'>Angular New Router</span>",
+                    "link": "app.routing.angular-new-router"
+                }
+            ]
+        },
+        {
+            "name": "<i class='fa fa-cog'></i><span class='title'>Config & Environments</span>",
+            "link": "app.config"
+        },
+        {
+            "name": "<i class='fa fa-table'></i><span class='title'>Tables</span>",
+            "link": "app.tables"
+        },
+        {
+            "name": "<i class='fa fa-lock'></i><span class='title'>Authentication</span>",
+            "link": "app.authentication"
+        },
+        {
+            "name": "<i class='fa fa-check-square-o'></i><span class='title'>Forms</span>",
+            "link": "app.forms"
+        },
+        {
+            "name": "<i class='fa fa-keyboard-o'></i><span class='title'>Autocomplete</span>",
+            "link": "app.autocomplete"
+        },
+        {
+            "name": "<i class='fa fa-hand-pointer-o'></i><span class='title'>Infinite scrolling</span>",
+            "link": "app.infinite-scrolling"
+        }
+    ]
+}

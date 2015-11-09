@@ -1,0 +1,4 @@
+<li ui-sref-active="active">
+    <a ui-sref="{{ leaf.link }}" ng-bind-html="leaf.name" ng-if="leaf.link"></a>
+    <a ng-bind-html="leaf.name" ng-if="!leaf.link"></a>
+</li>
