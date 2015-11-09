@@ -45,6 +45,7 @@
         $translateProvider.translations('en', LANGUAGES.en);
         $translateProvider.translations('fr', LANGUAGES.fr);
         $translateProvider.preferredLanguage((angular.isDefined(LANGUAGES[language])) ? language : 'en');
+        $translateProvider.useSanitizeValueStrategy('sanitize');
 
         // Highlight JS
         hljsServiceProvider.setOptions({
