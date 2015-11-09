@@ -37,7 +37,7 @@
         "highlightjs": {
             "main": [
                 "highlight.pack.js",
-                "styles/solarized_dark.css"
+                "styles/zenburn.css"
             ]
         }
     },
