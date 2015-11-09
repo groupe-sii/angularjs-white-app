@@ -35,10 +35,13 @@
         .config(config)
         .run(run);
 
-    config.$inject = ['$translateProvider', 'hljsServiceProvider', 'LANGUAGES'];
+    config.$inject = ['$locationProvider', '$translateProvider', 'hljsServiceProvider', 'LANGUAGES'];
 
     /* @ngInject */
-    function config($translateProvider, hljsServiceProvider, LANGUAGES) {
+    function config($locationProvider, $translateProvider, hljsServiceProvider, LANGUAGES) {
+
+        // HTML5 mode (no hashbang in front of URLs)
+        $locationProvider.html5Mode(true);
 
         // Translation
         var language = navigator.browserLanguage || navigator.language;
