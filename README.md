@@ -6,6 +6,7 @@ White app demonstrating common web patterns and their implementation with Angula
 
 * **Guidelines**: A bunch of guidelines to write clean code in AngularJS
 * **Navbar**: A directive to easily create your own navigation bar
+* **I18N**: Some documentation to quickly create i18n applications
 
 ## Write clean code !
 
@@ -30,7 +31,6 @@ Here is some recomendations you might want to apply in your Sass applications.
 ## What is to come ?
 
 * Config & Environments
-* I18N
 * Routing
 * Documentation
 * Tables

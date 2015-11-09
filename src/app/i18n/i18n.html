@@ -1,0 +1,103 @@
+<h1 class="app-title">{{ 'i18n.title' | translate }}</h1>
+
+<p><a href="https://angular-translate.github.io/" target="_blank">Angular Translate</a></p>
+
+<p>angular-translate is an AngularJS module that makes your life much easier when it comes to i18n and l10n including lazy loading and pluralization.</p>
+
+<h2>Quick use</h2>
+
+<div hljs hljs-language="javascript">
+angular
+    .module('at', ['pascalprecht.translate'])
+    .config(config);
+
+config.$inject = ['$translateProvider'];
+
+function config($translateProvider) {
+    $translateProvider.translations('en', {
+        TITLE: 'Hello',
+        FOO: 'This is a paragraph.',
+        BUTTON_LANG_EN: 'English',
+        BUTTON_LANG_FR: 'French'
+    });
+    $translateProvider.translations('fr', {
+        TITLE: 'Bonjour',
+        FOO: 'Ceci est un paragraphe',
+        BUTTON_LANG_EN: 'Anglais',
+        BUTTON_LANG_FR: 'Français'
+    });
+    $translateProvider.preferredLanguage('en');
+    $translateProvider.useSanitizeValueStrategy('sanitize'); // For security reasons: http://angular-translate.github.io/docs/#/guide/19_security
+}
+</div>
+
+<h2>With Config</h2>
+
+<p>In combinaison with angular-translate, we use the <a ui-sref="app.config">configuration module</a> made by SII. This allows you to create a unique JSON file per language you want to use in your application.</p>
+<p>To do this, you can create a <strong>languages</strong> subfolder in <strong>/config</strong> folder and add your languages files in it (e.g: en.json, fr.json, ...).</p>
+
+<h3>Gulp Config</h3>
+
+<p>In order to make it work, you must edit the gulp config task file (/gulp/config.js) and add the following lines :</p>
+<p><em>PS: You may have already done it by selecting <strong>angular-translate: i18n for your Angular app, made easy!</strong> while generating your application with <a href="https://github.com/groupe-sii/generator-gulp-angular" target="_blank" >generator-gulp-angular</a>.</em></p>
+
+<div hljs hljs-language="javascript">
+var _getAllLanguages = function() {
+    var filesystem = require('fs'),
+        dir = conf.paths.config + '/languages', // Read from 'CONFIG/languages/ folder'
+        languages = {};
+
+    filesystem.readdirSync(dir).forEach(function(file) {
+        var language = file.slice(0, -5); // Remove '.json' from file name
+
+        languages[language] = JSON.parse(filesystem.readFileSync(conf.paths.config + '/languages/' + file));
+    });
+
+    return languages;
+};
+
+gulp.task('config', function() {
+    var languagesConfig = _getAllLanguages();
+    ...
+    constants: {
+        ...
+        LANGUAGES: languagesConfig
+    }
+    ...
+});
+</div>
+
+<h3>Application</h3>
+
+<p>In the config method of your AngularJS application, you can use the following code :</p>
+
+      
+<div hljs hljs-language="javascript">
+function config($translateProvider, LANGUAGES) {
+    var language = navigator.browserLanguage || navigator.language;
+    $translateProvider.translations('en', LANGUAGES.en);
+    $translateProvider.translations('fr', LANGUAGES.fr);
+    $translateProvider.preferredLanguage((angular.isDefined(LANGUAGES[language])) ? language : 'en');
+    $translateProvider.useSanitizeValueStrategy('sanitize');
+}
+</div>
+
+<h2>Translate static files</h2>
+
+<p>Sometimes it's easier to entirely translate files instead of doing it piece by piece (e.g: for a homepage).</p>
+<p>The <strong>TranslationFactory</strong> allows you to retrieve the requested translation from template cache (if it was found) or from application (otherwise).</p>
+<p><a ui-sref="app.i18n-static">Click here</a> to see an example.</p>
+
+<div hljs hljs-language="javascript">
+function config($stateProvider) {
+    $stateProvider
+        .state('app.i18n-static', {
+            url: 'i18n/static',
+            templateProvider: function(TranslationFactory) {
+                return TranslationFactory.get('app/i18n/i18n-static.${LANG}.html').then(function(tpl) {
+                    return tpl;
+                });
+            }
+        });
+}
+</div>
