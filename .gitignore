@@ -6,3 +6,4 @@ coverage/
 .tmp/
 dist/
 src/app/config.js
+CHANGELOG.md
