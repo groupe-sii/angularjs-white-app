@@ -5,8 +5,6 @@
         .module('angularjsWhiteApp')
         .controller('MainController', MainController);
 
-    MainController.$inject = ['psResponsive', 'NAVIGATION'];
-
     /* @ngInject */
     function MainController(psResponsive, NAVIGATION) {
         var vm = this;

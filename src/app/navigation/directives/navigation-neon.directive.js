@@ -68,8 +68,6 @@
 
     /////////////////////////////////////////////////////////////////::
 
-    leafNeon.$inject = ['$compile'];
-
     /* @ngInject */
     function leafNeon($compile) {
         var directive = {

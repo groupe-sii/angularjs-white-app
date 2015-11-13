@@ -5,8 +5,6 @@
         .module('angularjsWhiteApp-factories')
         .factory('TranslationFactory', TranslationFactory);
 
-    TranslationFactory.$inject = ['$q', '$http', '$translate', '$templateCache'];
-
     /* @ngInject */
     function TranslationFactory($q, $http, $translate, $templateCache) {
         var factory = {

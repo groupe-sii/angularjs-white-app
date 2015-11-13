@@ -35,8 +35,6 @@
         .config(config)
         .run(run);
 
-    config.$inject = ['$locationProvider', '$translateProvider', 'hljsServiceProvider', 'LANGUAGES'];
-
     /* @ngInject */
     function config($locationProvider, $translateProvider, hljsServiceProvider, LANGUAGES) {
 

@@ -5,8 +5,6 @@
         .module('angularjsWhiteApp')
         .config(config);
 
-    config.$inject = ['$stateProvider'];
-
     /* @ngInject */
     function config($stateProvider) {
         $stateProvider
